@@ -1,0 +1,132 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with background image */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('image1.jpg'); /* Use the background image you uploaded */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Centering the greeting container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.greeting-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    transform: scale(0);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Smooth animation for the greeting box */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+input {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #2575fc;
+    border-radius: 25px;
+    font-size: 1.1em;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus effect for input */
+input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 15px rgba(106, 17, 203, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #6a11cb;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button active effect */
+button:active {
+    transform: translateY(1px);
+}
+
+#greeting-message {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #333;
+    opacity: 0;
+    animation: fadeInMessage 0.5s ease-out forwards;
+}
+
+/* Animation for the result message */
+@keyframes fadeInMessage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
